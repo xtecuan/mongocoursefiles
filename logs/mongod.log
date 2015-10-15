@@ -1,0 +1,43 @@
+2015-10-15T10:28:12.813-0400 I CONTROL  Hotfix KB2731284 or later update is installed, no need to zero-out data files
+2015-10-15T10:28:12.814-0400 I CONTROL  Trying to start Windows service 'MongoDB'
+2015-10-15T10:28:12.815-0400 I STORAGE  Service running
+2015-10-15T10:28:12.848-0400 I JOURNAL  [initandlisten] journal dir=D:\DATA.IDB\MongodbCourse\data\db\journal
+2015-10-15T10:28:12.850-0400 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-10-15T10:28:12.990-0400 I JOURNAL  [durability] Durability thread started
+2015-10-15T10:28:12.992-0400 I JOURNAL  [journal writer] Journal writer thread started
+2015-10-15T10:28:12.995-0400 I CONTROL  [initandlisten] MongoDB starting : pid=10756 port=27017 dbpath=D:\DATA.IDB\MongodbCourse\data\db 64-bit host=JULIANR
+2015-10-15T10:28:12.995-0400 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2015-10-15T10:28:12.995-0400 I CONTROL  [initandlisten] db version v3.0.7
+2015-10-15T10:28:12.995-0400 I CONTROL  [initandlisten] git version: 6ce7cbe8c6b899552dadd907604559806aa2e9bd
+2015-10-15T10:28:12.995-0400 I CONTROL  [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1') BOOST_LIB_VERSION=1_49
+2015-10-15T10:28:12.995-0400 I CONTROL  [initandlisten] allocator: tcmalloc
+2015-10-15T10:28:12.995-0400 I CONTROL  [initandlisten] options: { config: "D:\DATA.IDB\Program_Files\Mongodb-3.0.7\conf\mongod.conf", service: true, storage: { dbPath: "D:\DATA.IDB\MongodbCourse\data\db" }, systemLog: { destination: "file", path: "D:\DATA.IDB\MongodbCourse\logs\mongod.log" } }
+2015-10-15T10:28:12.996-0400 I INDEX    [initandlisten] allocating new ns file D:\DATA.IDB\MongodbCourse\data\db\local.ns, filling with zeroes...
+2015-10-15T10:28:13.271-0400 I STORAGE  [FileAllocator] allocating new datafile D:\DATA.IDB\MongodbCourse\data\db\local.0, filling with zeroes...
+2015-10-15T10:28:13.271-0400 I STORAGE  [FileAllocator] creating directory D:\DATA.IDB\MongodbCourse\data\db\_tmp
+2015-10-15T10:28:13.277-0400 I STORAGE  [FileAllocator] done allocating datafile D:\DATA.IDB\MongodbCourse\data\db\local.0, size: 64MB,  took 0.004 secs
+2015-10-15T10:28:13.284-0400 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-10-15T10:30:10.773-0400 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61387 #1 (1 connection now open)
+2015-10-15T10:32:54.874-0400 I INDEX    [conn1] allocating new ns file D:\DATA.IDB\MongodbCourse\data\db\test.ns, filling with zeroes...
+2015-10-15T10:32:55.172-0400 I STORAGE  [FileAllocator] allocating new datafile D:\DATA.IDB\MongodbCourse\data\db\test.0, filling with zeroes...
+2015-10-15T10:32:55.177-0400 I STORAGE  [FileAllocator] done allocating datafile D:\DATA.IDB\MongodbCourse\data\db\test.0, size: 64MB,  took 0.004 secs
+2015-10-15T10:32:55.183-0400 I WRITE    [conn1] insert test.names query: { _id: ObjectId('561fb91641622886ea640e03'), name: "Andrew Erlichson" } ninserted:1 keyUpdates:0 writeConflicts:0 numYields:0 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, MMAPV1Journal: { acquireCount: { w: 8 }, acquireWaitCount: { w: 2 }, timeAcquiringMicros: { w: 378 } }, Database: { acquireCount: { w: 1, W: 1 } }, Collection: { acquireCount: { W: 1 } }, Metadata: { acquireCount: { W: 4 } } } 310ms
+2015-10-15T10:32:55.185-0400 I COMMAND  [conn1] command test.$cmd command: insert { insert: "names", documents: [ { _id: ObjectId('561fb91641622886ea640e03'), name: "Andrew Erlichson" } ], ordered: true } keyUpdates:0 writeConflicts:0 numYields:0 reslen:40 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, MMAPV1Journal: { acquireCount: { w: 8 }, acquireWaitCount: { w: 2 }, timeAcquiringMicros: { w: 378 } }, Database: { acquireCount: { w: 1, W: 1 } }, Collection: { acquireCount: { W: 1 } }, Metadata: { acquireCount: { W: 4 } } } 372ms
+2015-10-15T11:02:35.039-0400 I NETWORK  [conn1] end connection 127.0.0.1:61387 (0 connections now open)
+2015-10-15T11:08:32.192-0400 I CONTROL  [serviceShutdown] got SERVICE_CONTROL_STOP request from Windows Service Control Manager, will terminate after current cmd ends
+2015-10-15T11:08:32.202-0400 I CONTROL  [serviceStopWorker] now exiting
+2015-10-15T11:08:32.202-0400 I NETWORK  [serviceStopWorker] shutdown: going to close listening sockets...
+2015-10-15T11:08:32.202-0400 I NETWORK  [serviceStopWorker] closing listening socket: 448
+2015-10-15T11:08:32.202-0400 I NETWORK  [serviceStopWorker] shutdown: going to flush diaglog...
+2015-10-15T11:08:32.202-0400 I NETWORK  [serviceStopWorker] shutdown: going to close sockets...
+2015-10-15T11:08:32.203-0400 I STORAGE  [serviceStopWorker] shutdown: waiting for fs preallocator...
+2015-10-15T11:08:32.203-0400 I STORAGE  [serviceStopWorker] shutdown: final commit...
+2015-10-15T11:08:32.206-0400 I JOURNAL  [serviceStopWorker] journalCleanup...
+2015-10-15T11:08:32.206-0400 I JOURNAL  [serviceStopWorker] removeJournalFiles
+2015-10-15T11:08:32.208-0400 I JOURNAL  [serviceStopWorker] Terminating durability thread ...
+2015-10-15T11:08:32.305-0400 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-10-15T11:08:32.305-0400 I JOURNAL  [durability] Durability thread stopped
+2015-10-15T11:08:32.306-0400 I STORAGE  [serviceStopWorker] shutdown: closing all files...
+2015-10-15T11:08:32.310-0400 I STORAGE  [serviceStopWorker] closeAllFiles() finished
+2015-10-15T11:08:32.310-0400 I STORAGE  [serviceStopWorker] shutdown: removing fs lock...
+2015-10-15T11:08:32.311-0400 I CONTROL  [serviceStopWorker] dbexit:  rc: 49

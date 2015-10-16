@@ -5,6 +5,7 @@
 package org.xtecuan.samples.hellospark;
 
 import freemarker.template.Template;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import org.xtecuan.samples.hellospark.util.TemplateUtil;
@@ -17,21 +18,21 @@ import spark.Spark;
  *
  * @author xtecuan
  */
-public class HelloWorldSparkFreemarkerStyle {
+public class HelloWorldSparkFreemarkerPostGetStyle {
 
   public static void main(String[] args) {
     Spark.get(new Route("/") {
-      private static final String TEMPLATE_NAME = "hello";
+      private static final String TEMPLATE_NAME = "fruitForm";
 
       @Override
       public Object handle(Request rqst, Response rspns) {
-        Template hello = null;
+        Template fruitForm = null;
         String result = null;
         try {
-          hello = TemplateUtil.getTemplate(TEMPLATE_NAME);
+          fruitForm = TemplateUtil.getTemplate(TEMPLATE_NAME);
           Map<String, Object> params = new HashMap<>();
-          params.put("name", "Xtecuan");
-          result = TemplateUtil.fillAndGetTemplateResult(hello, params);
+          params.put("fruits", Arrays.asList("apple", "orange", "banana", "peach"));
+          result = TemplateUtil.fillAndGetTemplateResult(fruitForm, params);
         } catch (Exception ex) {
           halt(500);
           ex.printStackTrace();
@@ -41,24 +42,19 @@ public class HelloWorldSparkFreemarkerStyle {
       }
     });
 
-    Spark.get(new Route("/hello/:user") {
-      private static final String TEMPLATE_NAME = "greeting";
+    Spark.post(new Route("/favorite_fruit") {
 
       @Override
       public Object handle(Request rqst, Response rspns) {
-        Template greeting = null;
-        String result = null;
-        try {
-          greeting = TemplateUtil.getTemplate(TEMPLATE_NAME);
-          Map<String, Object> params = new HashMap<>();
-          params.put("name", rqst.params(":user"));
-          result = TemplateUtil.fillAndGetTemplateResult(greeting, params);
-        } catch (Exception ex) {
-          halt(500);
-          ex.printStackTrace();
-        } finally {
-          return result;
+        String result = "Why don't you pick one?";
+        final String fruit = rqst.queryParams("fruit");
+
+        if (fruit == null) {
+        } else {
+          result = "Your favorite fruit is " + fruit;
         }
+
+        return result;
       }
     });
   }

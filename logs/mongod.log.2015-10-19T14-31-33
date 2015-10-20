@@ -1,0 +1,32 @@
+2015-10-15T11:37:47.696-0400 I CONTROL  Hotfix KB2731284 or later update is installed, no need to zero-out data files
+2015-10-15T11:37:47.696-0400 I CONTROL  Trying to start Windows service 'MongoDB'
+2015-10-15T11:37:47.698-0400 I STORAGE  Service running
+2015-10-15T11:37:47.750-0400 I JOURNAL  [initandlisten] journal dir=D:\DATA.IDB\MongodbCourse\data\db\journal
+2015-10-15T11:37:47.750-0400 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-10-15T11:37:48.002-0400 I JOURNAL  [durability] Durability thread started
+2015-10-15T11:37:48.003-0400 I JOURNAL  [journal writer] Journal writer thread started
+2015-10-15T11:37:48.004-0400 I CONTROL  [initandlisten] MongoDB starting : pid=2640 port=27017 dbpath=D:\DATA.IDB\MongodbCourse\data\db 64-bit host=JULIANR
+2015-10-15T11:37:48.004-0400 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2015-10-15T11:37:48.004-0400 I CONTROL  [initandlisten] db version v3.0.7
+2015-10-15T11:37:48.004-0400 I CONTROL  [initandlisten] git version: 6ce7cbe8c6b899552dadd907604559806aa2e9bd
+2015-10-15T11:37:48.004-0400 I CONTROL  [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1') BOOST_LIB_VERSION=1_49
+2015-10-15T11:37:48.004-0400 I CONTROL  [initandlisten] allocator: tcmalloc
+2015-10-15T11:37:48.004-0400 I CONTROL  [initandlisten] options: { config: "D:\DATA.IDB\Program_Files\Mongodb-3.0.7\conf\mongod.conf", service: true, storage: { dbPath: "D:\DATA.IDB\MongodbCourse\data\db" }, systemLog: { destination: "file", path: "D:\DATA.IDB\MongodbCourse\logs\mongod.log" } }
+2015-10-15T11:37:48.350-0400 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-10-19T10:28:49.957-0400 I CONTROL  [serviceShutdown] got SERVICE_CONTROL_PRESHUTDOWN request from Windows Service Control Manager, will terminate after current cmd ends
+2015-10-19T10:28:52.777-0400 I CONTROL  [serviceStopWorker] now exiting
+2015-10-19T10:28:52.777-0400 I NETWORK  [serviceStopWorker] shutdown: going to close listening sockets...
+2015-10-19T10:28:53.093-0400 I NETWORK  [serviceStopWorker] closing listening socket: 448
+2015-10-19T10:28:53.295-0400 I NETWORK  [serviceStopWorker] shutdown: going to flush diaglog...
+2015-10-19T10:28:53.295-0400 I NETWORK  [serviceStopWorker] shutdown: going to close sockets...
+2015-10-19T10:28:53.315-0400 I STORAGE  [serviceStopWorker] shutdown: waiting for fs preallocator...
+2015-10-19T10:28:53.411-0400 I STORAGE  [serviceStopWorker] shutdown: final commit...
+2015-10-19T10:28:53.438-0400 I JOURNAL  [serviceStopWorker] journalCleanup...
+2015-10-19T10:28:53.471-0400 I JOURNAL  [serviceStopWorker] removeJournalFiles
+2015-10-19T10:28:53.983-0400 I JOURNAL  [serviceStopWorker] Terminating durability thread ...
+2015-10-19T10:28:54.044-0400 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-10-19T10:28:54.113-0400 I JOURNAL  [durability] Durability thread stopped
+2015-10-19T10:28:54.113-0400 I STORAGE  [serviceStopWorker] shutdown: closing all files...
+2015-10-19T10:28:54.188-0400 I STORAGE  [serviceStopWorker] closeAllFiles() finished
+2015-10-19T10:28:54.198-0400 I STORAGE  [serviceStopWorker] shutdown: removing fs lock...
+2015-10-19T10:28:54.198-0400 I CONTROL  [serviceStopWorker] dbexit:  rc: 49
